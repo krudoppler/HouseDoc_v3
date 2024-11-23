@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    background-color: #1C1D21;
+}
+
+#title-wrapper {
+    display: flex;
+    flex-direction: row;
+    font-family: "Karla", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+#title-top {
+    color: #d9bdf3;
+}
+
+#title-bottom {
+    color: #ad8df9;
+}
