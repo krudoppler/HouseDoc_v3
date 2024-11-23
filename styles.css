@@ -1,6 +1,6 @@
 body {
     display: flex;
-    background-color: #1C1D21;
+    background-color: #0D1117;
 }
 
 #title-wrapper {
@@ -12,12 +12,13 @@ body {
     font-style: normal;
     font-size: 40px;
     margin-left: 20px;
+    text-shadow: 0px 0px 3px #b57ef5;
 }
 
 #title-top {
-    color: #d9bdf3;
+    color: #ebe4f0;
 }
 
 #title-bottom {
-    color: #ad8df9;
+    color: #8B5CF6 ;
 }
