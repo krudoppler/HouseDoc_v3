@@ -1,24 +1,18 @@
+html, body {
+    height: 100%; 
+    margin: 0;    
+    padding: 0;   
+}
+
 body {
-    display: flex;
-    background-color: #0D1117;
+    background-image: linear-gradient(to top right, black, rgb(49, 46, 65));
 }
 
-#title-wrapper {
-    display: flex;
-    flex-direction: row;
-    font-family: "Karla", serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 40px;
+
+
+#logo {
+    width: 250px;
     margin-left: 20px;
-    text-shadow: 0px 0px 3px #b57ef5;
+    margin-top: 20px;
 }
 
-#title-top {
-    color: #ebe4f0;
-}
-
-#title-bottom {
-    color: #8B5CF6 ;
-}
