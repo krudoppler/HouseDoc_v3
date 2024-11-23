@@ -38,8 +38,9 @@ body {
     color: white;
     font-weight: 500;
     text-decoration: none;
-    margin-left: 40px;
+    margin-left: 40px; /* Keep this for other navbar links */
 }
+
 
 .navbar a::before {
     content: "";
@@ -55,3 +56,47 @@ body {
 .navbar a:hover::before {
     width: 100%;
 } 
+
+.dropdown {
+    position: relative;
+    margin-left: 0; /* Override the extra margin for dropdown */
+}
+
+.dropdown-menu {
+    list-style: none;
+    margin: 0; /* Reset margin to avoid spacing issues */
+    padding: 0;
+    background-color: #333;
+    color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    display: none; /* Initially hidden */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Ensure it stays above other elements */
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    text-align: left; /* Align text in dropdown */
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: white;
+    display: block; /* Ensure full clickable area */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Reset position */
+}
+
+/* Smooth animation */
+.dropdown-menu {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
