@@ -6,6 +6,7 @@ let bathroomsBtn = document.getElementById("save-bathroom")
 let bathroomOutput = document.getElementById("bathroom-output")
 
 
+
 function saveBathroomNumber(){
     localStorage.setItem("bathrooms", JSON.stringify(bathroomNum.value))
     const bathrooms = JSON.parse(localStorage.getItem("bathrooms"))
@@ -13,9 +14,18 @@ function saveBathroomNumber(){
     Bathrooms: ${bathrooms}
     `
 }
-//input the vlaue ofx bathrooms
-// hit save to save the input value
-//it displays the output in the output field
+
+let bedroomNum = document.getElementById("bedroom-value")
+let bedroomBtn = document.getElementById("save-bedroom")
+let bedroomOutput = document.getElementById("bedroom-output")
+
+function saveBedroomNumber() {
+    localStorage.setItem("bedrooms", JSON.stringify(bedroomNum.value))
+    let bedrooms = JSON.parse(localStorage.getItem("bedrooms"))
+    bedroomOutput.innerHTML = `
+    Bedrooms: ${bedrooms}
+    `
+}
 
 
 
