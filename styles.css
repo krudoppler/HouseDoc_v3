@@ -86,3 +86,10 @@ body {
     font-family: "Josefin sans", sans-serif;
     font-weight: 100px;
 }
+
+#bathroom-container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+

@@ -21,8 +21,8 @@
             <img src="images/logo.svg" alt="HouseDoc-logo" id="logo">
         </a>
         <nav class="navbar">
-            <a href="#home-details">Home Details</a>
-            <a href="#projects">Upcoming Projects</a>
+            <a href="#home-details" id="home-details-link">Home Details</a>
+            <a href="#projects" id="projects-link">Upcoming Projects</a>
             <a href="#specialists">Specialists</a>
             <a href="#experiment">Experiment</a>
             <a href="#contact">Contact Us</a>
@@ -33,22 +33,15 @@
     </div>
     <section class="section-wrapper">
         <section id="home-details">
-            <h1>Welcome to HomeDetails</h1>
+            <div id="bathroom-container">
+                <div><p>Bathrooms</p></div>
+                <div><input type="number" id="bathroom-value"></div>
+                <div> <button id="save-bathroom" onclick="saveBathroomNumber()">Save Bathroom</button></div>
+                <div> <p id="bathroom-output">Bathrooms: </p></div>
+            </div>
         </section>
-        <section id="projects">
-            <h1></h1>
-        </section>
-        <section id="specialists">
-            <h1></h1>
-        </section>
-        <section id="experiment">
-            <h1></h1>
-        </section>
-        <section id="contact">
-            <h1></h1>
-        </section>
-    </section>
     
+    <script src="index.js"></script>
     
 </body>
 </html>
