@@ -1,31 +1,35 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"
+import { getDatabase, 
+         ref,
+         push } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js"
+
+const firebaseConfig = {
+    databaseURL: "https://housedocmvp-default-rtdb.firebaseio.com/"
+}
+
+const app = initializeApp(firebaseConfig)
+const database = getDatabase(app)
+const referenceInDB = ref(database, "bathrooms")
 
 
-
-let bathroomNum = document.getElementById("bathroom-value")
-let bathroomsBtn = document.getElementById("save-bathroom")
+//DOM Variables
+let bathroomValue = document.getElementById("bathroom-value")
+let bathroomBtn = document.getElementById("save-bathroom")
 let bathroomOutput = document.getElementById("bathroom-output")
 
 
 
-function saveBathroomNumber(){
-    localStorage.setItem("bathrooms", JSON.stringify(bathroomNum.value))
-    const bathrooms = JSON.parse(localStorage.getItem("bathrooms"))
-    bathroomOutput.innerHTML = `
-    Bathrooms: ${bathrooms}
-    `
+
+
+// Event listeners
+bathroomBtn.addEventListener("click", saveBathroomsInDB)
+
+
+
+// Functions
+function saveBathroomsInDB() {
+    let bathroomCount = bathroomValue.value 
+    push(referenceInDB, bathroomCount) 
+    bathroomOutput.innerHTML = `Bathrooms: ${bathroomCount} You like to poo don't you 😀`
 }
-
-let bedroomNum = document.getElementById("bedroom-value")
-let bedroomBtn = document.getElementById("save-bedroom")
-let bedroomOutput = document.getElementById("bedroom-output")
-
-function saveBedroomNumber() {
-    localStorage.setItem("bedrooms", JSON.stringify(bedroomNum.value))
-    let bedrooms = JSON.parse(localStorage.getItem("bedrooms"))
-    bedroomOutput.innerHTML = `
-    Bedrooms: ${bedrooms}
-    `
-}
-
-
 
