@@ -16,6 +16,18 @@ body {
     background-image: linear-gradient(to top right, black, rgb(49, 46, 65));
 }
 
+button {
+    padding: 4px 8px;
+    border-radius: 7px;
+    font-family: "Josefin sans", sans-serif;
+    background: linear-gradient(#dfc2e6bb,#544756bb);
+    border: 0px solid black;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb(222, 202, 222);
+    text-shadow: 0 0 3px rgb(1, 1, 1);
+}
+
 #logo {
     width: 250px;
 }
