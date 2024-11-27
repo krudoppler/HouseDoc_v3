@@ -2,7 +2,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebas
 import { getDatabase, 
          ref,
          push,
-         onValue } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js"
+         onValue,
+         remove } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js"
 
 const firebaseConfig = {
     databaseURL: "https://housedocmvp-default-rtdb.firebaseio.com/"
@@ -17,13 +18,18 @@ const referenceInDB = ref(database, "bathrooms")
 let bathroomValue = document.getElementById("bathroom-value")
 let bathroomBtn = document.getElementById("save-bathroom")
 let bathroomOutput = document.getElementById("bathroom-output")
+let bathroomDeleteBtn = document.getElementById("delete-bathroom")
 
 
 // Database Snapshot
 onValue(referenceInDB, function(snapshot) {
-    const snapshotValues = snapshot.val()
-    const bathroomsInDB = Object.values(snapshotValues)
-    renderBathrooms(bathroomsInDB)
+    const snapshotDoesExist = snapshot.exists()
+    if(snapshotDoesExist) {
+        const snapshotValues = snapshot.val()
+        const bathroomsInDB = Object.values(snapshotValues)
+        renderBathrooms(bathroomsInDB)
+    }
+
 })
 
 
@@ -43,3 +49,7 @@ function renderBathrooms(bathroomsInDB){
     bathroomOutput.innerHTML = `Bathrooms: ${bathroomsInDB.join(" ")}`
 }
 
+bathroomDeleteBtn.addEventListener("click", function(){
+    remove(referenceInDB)
+    bathroomOutput.innerHTML = "Bathrooms: "
+})
