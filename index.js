@@ -1,7 +1,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"
 import { getDatabase, 
          ref,
-         push } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js"
+         push,
+         onValue } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js"
 
 const firebaseConfig = {
     databaseURL: "https://housedocmvp-default-rtdb.firebaseio.com/"
@@ -18,7 +19,12 @@ let bathroomBtn = document.getElementById("save-bathroom")
 let bathroomOutput = document.getElementById("bathroom-output")
 
 
-
+// Database Snapshot
+onValue(referenceInDB, function(snapshot) {
+    const snapshotValues = snapshot.val()
+    const bathroomsInDB = Object.values(snapshotValues)
+    renderBathrooms(bathroomsInDB)
+})
 
 
 // Event listeners
@@ -30,6 +36,10 @@ bathroomBtn.addEventListener("click", saveBathroomsInDB)
 function saveBathroomsInDB() {
     let bathroomCount = bathroomValue.value 
     push(referenceInDB, bathroomCount) 
-    bathroomOutput.innerHTML = `Bathrooms: ${bathroomCount} You like to poo don't you 😀`
+    
+}
+
+function renderBathrooms(bathroomsInDB){
+    bathroomOutput.innerHTML = `Bathrooms: ${bathroomsInDB.join(" ")}`
 }
 
