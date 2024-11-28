@@ -17,14 +17,14 @@ body {
 }
 
 button {
-    padding: 4px 8px;
+    padding: 6px 12px;
     border-radius: 7px;
     font-family: "Josefin sans", sans-serif;
-    background: linear-gradient(#dfc2e6bb,#544756bb);
+    background-color: rgba(90, 27, 95, 0.85);
     border: 0px solid black;
     font-size: 13px;
     font-weight: 500;
-    color: rgb(222, 202, 222);
+    color: rgb(253, 253, 253);
     text-shadow: 0 0 3px rgb(1, 1, 1);
 }
 
