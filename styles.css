@@ -112,4 +112,16 @@ button {
     margin-top: 15px;
 }
 
+/* Modal */
 
+.modal-img {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.karla {
+    width: 50%;
+}
