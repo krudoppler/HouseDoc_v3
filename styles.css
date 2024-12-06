@@ -1,121 +1,140 @@
 /* Element Styles */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%; 
-    margin: 0;    
-    padding: 0;   
-    scroll-behavior: smooth;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
-    min-height: 100vh;
-    background-image: linear-gradient(to top right, black, rgb(49, 46, 65));
+  min-height: 100vh;
+  background-image: linear-gradient(to top right, black, rgb(49, 46, 65));
 }
 
 button {
-    padding: 6px 12px;
-    border-radius: 7px;
-    font-family: "Josefin sans", sans-serif;
-    background-color: rgba(90, 27, 95, 0.85);
-    border: 0px solid black;
-    font-size: 13px;
-    font-weight: 500;
-    color: rgb(253, 253, 253);
-    text-shadow: 0 0 3px rgb(1, 1, 1);
+  padding: 6px 12px;
+  border-radius: 7px;
+  font-family: "Josefin sans", sans-serif;
+  background-color: rgba(90, 27, 95, 0.85);
+  border: 0px solid black;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgb(253, 253, 253);
+  text-shadow: 0 0 3px rgb(1, 1, 1);
 }
 
 /* NAVBAR Styles */
 
 #logo {
-    width: 250px;
+  width: 250px;
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    font-family: "Montserrat", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  font-family: "Montserrat", sans-serif;
 }
 
 .navbar a {
-    position: relative;
-    font-size: 18px;
-    color: white;
-    font-weight: 500;
-    text-decoration: none;
-    margin-left: 40px;
+  position: relative;
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
 }
 
 .navbar a::before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: white;
-    transition: .3s;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
 }
 
 .navbar a:hover::before {
-    width: 100%;
-} 
+  width: 100%;
+}
 .line-container {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically (if needed) */
-    position: fixed; /* Optional: Keeps the container fixed */
-    top: calc(80px); /* Adjust based on navbar height */
-    width: 100%; /* Full width of the viewport */
-    z-index: 98; /* Ensure it appears below the navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: calc(80px);
+  width: 100%;
+  z-index: 98;
 }
 
 /* Main */
 
 .navbar-line {
-    width: 80%; /* Keep this for the line's width */
-    height: 1px; /* Thickness of the line */
-    background-color:#845e8bbb; /* Line color */
-    text-shadow: 0px 0px 5px purple;
+  width: 80%;
+  height: 1px;
+  background-color: #845e8bbb;
+  text-shadow: 0px 0px 5px purple;
 }
 
-/* Overall Section CSS ************************************************/
+/* Overall Section CSS */
 .section-wrapper {
-    padding-top: 100px;
-    margin-left: 100px;
-    color: white;
-    font-family: "Josefin sans", sans-serif;
-    font-weight: 500;
+  padding-top: 100px;
+  margin-left: 100px;
+  color: white;
+  font-family: "Josefin sans", sans-serif;
+  font-weight: 500;
 }
 
+.overall-container {
+  display: flex;
+  justify-content: space-between;
+}
 
 /* Form Styling */
 .form-container {
-    padding: 7px;
-    display: flex;
-    flex-direction: column;
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-container input {
-    width: 300px;
-    box-sizing: border-box;
-    padding: 6px;
-    background-color: #f3e0f8;
-    margin-bottom: 15px;
+  width: 300px;
+  box-sizing: border-box;
+  padding: 6px;
+  background-color: #f3e0f8;
+  margin-bottom: 15px;
 }
 
 .form-container button {
-    width: 300px;
+  width: 150px;
 }
+
+.submit-btn:hover {
+  background-color: aquamarine;
+}
+
+.container-right {
+  margin-right: 450px;
+}
+
+.form-data-render p {
+  line-height: 1.8;
+}
+
+
