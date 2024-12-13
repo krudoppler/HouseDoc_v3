@@ -1,5 +1,8 @@
+// HTML Elements
 const homeInformation = document.getElementById("homeinformationform");
+const radioTest = document.getElementById("container-test");
 
+// Event Listeners
 homeInformation.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -11,5 +14,7 @@ homeInformation.addEventListener("submit", function (e) {
   document.getElementById("form-data-render").innerHTML = `
     <p>Home Address: ${homeAddress} <br>
      Home Price: ${homePrice} </p>
-`
+`;
 });
+
+ra
