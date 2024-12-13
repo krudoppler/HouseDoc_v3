@@ -31,6 +31,10 @@ button {
   text-shadow: 0 0 3px rgb(1, 1, 1);
 }
 
+h3 {
+  padding: 15px 0px 5px 7px;
+}
+
 /* NAVBAR Styles */
 
 #logo {
@@ -119,6 +123,7 @@ button {
   padding: 6px;
   background-color: #f3e0f8;
   margin-bottom: 15px;
+  border-radius: 6.6px;
 }
 
 .form-container button {
