@@ -118,10 +118,9 @@ h3 {
 }
 
 .form-container input {
-  width: 300px;
+  width: 200px;
   box-sizing: border-box;
   padding: 6px;
-  background-color: #f3e0f8;
   margin-bottom: 15px;
   border-radius: 6.6px;
 }
