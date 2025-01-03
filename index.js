@@ -20,7 +20,7 @@ homeInformation.addEventListener("submit", function (e) {
     Home Price: ${homePrice} <br>
     Square Feet: ${homeSqFt} <br>
     Lot Size: ${homeLotSize} <br>
-    Year Built: ${homePrice} <br>
+    Year Built: ${homeYearBuilt} <br>
     </p>
 `;
 });
