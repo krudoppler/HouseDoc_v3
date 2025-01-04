@@ -46,8 +46,25 @@
     </div>
     <main>
       <section class="section-wrapper">
-        <div class="overall-container" id="overall-container">
-          
+        <div class="list-container" id="list-container"></div>
+        <div class="divider-container">
+          <div class="divider"></div>
+        </div>
+        <div id="add-task-form-container" class="add-task-form-container">
+          <form id="add-task-form" class="add-task-form">
+            <h2>Add Task</h2>
+            <input
+              type="text"
+              name="task-name"
+              id="task-name"
+              placeholder="Task Description"
+              required
+            />
+            <br />
+            <input type="date" name="task-date" id="task-date" required />
+            <br>
+            <button id="submit-task" class="submit-task">Submit</button>
+          </form>
         </div>
       </section>
       <script src="index.js" type="module"></script>

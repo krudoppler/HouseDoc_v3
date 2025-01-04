@@ -33,8 +33,6 @@ button {
 
 button:hover {
   cursor: pointer;
-  background-color: white;
-  color: rgba(90, 27, 95, 0.85);;
 }
 
 h3 {
@@ -111,6 +109,19 @@ h3 {
   font-weight: 500;
 }
 
-.overall-container {
+.list-container {
   margin: auto;
+}
+
+/* Divider CSS */
+.divider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0; /* Add space above and below the divider */
+}
+
+.divider {
+  width: 90%; /* Adjust width to your needs */
+  border-top: 1px solid #ccc; /* Light gray line */
 }
