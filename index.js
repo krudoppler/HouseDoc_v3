@@ -1,85 +1,61 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"
-import { getDatabase, 
-         ref,
-         push,
-         onValue,
-         remove } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js"
+import { completedTasks } from "./data.js";
 
-const firebaseConfig = {
-    databaseURL: "https://housedocmvp-default-rtdb.firebaseio.com/"
-}
+// Global Variables
 
-const app = initializeApp(firebaseConfig)
-const database = getDatabase(app)
-const referenceInDB = ref(database, "bathrooms")
-const referenceApplianceInDB = ref(database, "appliances")
+let allTasks = [...completedTasks];
+let nextId = allTasks.length ? allTasks[allTasks.length - 1].id + 1 : 1;
 
-
-//DOM Variables
-let bathroomValue = document.getElementById("bathroom-value")
-let bathroomBtn = document.getElementById("save-bathroom")
-let bathroomOutput = document.getElementById("bathroom-output")
-let bathroomDeleteBtn = document.getElementById("delete-bathroom")
-
-let applianceValue = document.getElementById("appliance-type")
-let applianceBtn = document.getElementById("save-appliance")
-let applianceOutput = document.getElementById("appliance-output")
-let applianceDeleteBtn = document.getElementById("delete-appliance")
-
-
-// Database Snapshot
-onValue(referenceInDB, function(snapshot) {
-    const snapshotDoesExist = snapshot.exists()
-    if(snapshotDoesExist) {
-        const snapshotValues = snapshot.val()
-        const bathroomsInDB = Object.values(snapshotValues)
-        renderBathrooms(bathroomsInDB)
-    }
-
-})
-
-onValue(referenceApplianceInDB, function(snapshot) {
-    const snapshotDoesExist = snapshot.exists()
-    if(snapshotDoesExist) {
-        const snapshotValues = snapshot.val()
-        const appliancesInDB = Object.values(snapshotValues)
-        renderAppliances(appliancesInDB)
-    }
-
-})
-
+// DOM Elements
+const listContainer = document.getElementById("list-container");
+const taskSubmitBtn = document.getElementById("submit-task");
+const addedTaskName = document.getElementById("task-name");
+const addedTaskDate = document.getElementById("task-date");
 
 // Event listeners
-bathroomBtn.addEventListener("click", saveBathroomsInDB)
-applianceBtn.addEventListener("click", saveAppliancesinDB)
+document.addEventListener("click", function (e) {
+  if (e.target.dataset.remove) {
+    const taskToRemove = e.target.dataset.remove;
+    removeTask(taskToRemove);
+  }
+});
 
-
+taskSubmitBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  addTaskToAllTasks(addedTaskName.value, addedTaskDate.value);
+});
 
 // Functions
-function saveBathroomsInDB() {
-    let bathroomCount = bathroomValue.value 
-    push(referenceInDB, bathroomCount) 
+function getData() {
+  let dataHTML = "";
+  allTasks.forEach((individualTask, index) => {
+    dataHTML += `
+    <div class="task-name">
+      ${individualTask.task} | ${individualTask.date} | <button id="remove-btn" class="remove-btn" data-remove="${index}"> Remove </button>
+    </div>
+    `;
+  });
+  return dataHTML;
 }
 
-function saveAppliancesinDB() {
-    let applianceVar = applianceValue.value
-    push(referenceApplianceInDB, applianceVar)
+function renderData() {
+  const dataDisplay = getData();
+  listContainer.innerHTML = dataDisplay;
 }
 
-function renderBathrooms(bathroomsInDB){
-    bathroomOutput.innerHTML = `Bathrooms: ${bathroomsInDB.join(" ")}`
+renderData();
+
+function removeTask(taskToRemove) {
+  allTasks.splice(taskToRemove, 1);
+  renderData();
 }
 
-function renderAppliances(appliancesInDB){
-    applianceOutput.innerHTML = `Appliances: ${appliancesInDB.join(" ")}`
+function addTaskToAllTasks(addedTaskName, addedTaskDate) {
+  allTasks.push({ 
+    id: nextId,
+    task: addedTaskName,
+    date: addedTaskDate });
+  nextId++
+  renderData();
+  console.log(allTasks)
 }
 
-bathroomDeleteBtn.addEventListener("click", function(){
-    remove(referenceInDB)
-    bathroomOutput.innerHTML = "Bathrooms: "
-})
-
-applianceDeleteBtn.addEventListener("click", function(){
-    remove(referenceApplianceInDB)
-    applianceOutput.innerHTML = "Appliances: "
-})

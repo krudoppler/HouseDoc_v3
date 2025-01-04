@@ -1,59 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HouseDoc</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Happy+Monkey&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Happy+Monkey&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Happy+Monkey&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Happy+Monkey&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Happy+Monkey&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Happy+Monkey&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
     <header class="header">
-        <a href="#" class="logo">
-            <img src="images/logo.svg" alt="HouseDoc-logo" id="logo">
-        </a>
-        <nav class="navbar">
-            <a href="#home-details" id="home-details-link">Home Details</a>
-            <a href="#projects" id="projects-link">Upcoming Projects</a>
-            <a href="#specialists">Specialists</a>
-            <a href="#experiment">Experiment</a>
-            <a href="#contact">Contact Us</a>
-        </nav>
+      <a href="#" class="logo">
+        <img src="images/logo.svg" alt="HouseDoc-logo" id="logo" />
+      </a>
+      <nav class="navbar">
+        <a href="#home-details" id="home-details-link">Home Details</a>
+        <a href="#projects" id="projects-link">Utility List</a>
+        <a href="#specialists">Specialists</a>
+        <a href="#experiment">Experiment</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
     </header>
     <div class="line-container">
-        <div class="navbar-line"></div>
+      <div class="navbar-line"></div>
     </div>
-    <section class="section-wrapper">
-        <section id="home-details">
-            <div id="bathroom-container">
-                <div><p>Bathrooms</p></div>
-                <div><input type="number" id="bathroom-value"></div>
-                <div><button id="save-bathroom">Save Bathroom</button></div>
-                <div><button id="delete-bathroom">Delete Bathrooms</button></div>
-                <div> <p id="bathroom-output">Bathrooms: </p></div>
-            </div>
-            <div id="bathroom-container">
-                <div><p>Appliance Type</p></div>
-                <div><input type="text" id="appliance-type"></div>
-                <div><button id="save-appliance">Save Appliance</button></div>
-                <div><button id="delete-appliance">Delete Appliance</button></div>
-                <div><p id="appliance-output">Appliance: </p></div>
-            </div>
-        </section>
-    
-    <script src="index.js" type="module"></script>
-    
-</body>
+    <main>
+      <section class="section-wrapper">
+        <div class="list-container" id="list-container"></div>
+        <div class="divider-container">
+          <div class="divider"></div>
+        </div>
+        <div id="add-task-form-container" class="add-task-form-container">
+          <form id="add-task-form" class="add-task-form">
+            <h2>Add Task</h2>
+            <input
+              type="text"
+              name="task-name"
+              id="task-name"
+              placeholder="Task Description"
+              required
+            />
+            <br />
+            <input type="date" name="task-date" id="task-date" required />
+            <br>
+            <button id="submit-task" class="submit-task">Submit</button>
+          </form>
+        </div>
+      </section>
+      <script src="index.js" type="module"></script>
+    </main>
+  </body>
 </html>
