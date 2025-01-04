@@ -31,6 +31,12 @@ button {
   text-shadow: 0 0 3px rgb(1, 1, 1);
 }
 
+button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: rgba(90, 27, 95, 0.85);;
+}
+
 h3 {
   padding: 15px 0px 5px 7px;
 }
@@ -106,39 +112,5 @@ h3 {
 }
 
 .overall-container {
-  display: flex;
-  justify-content: space-between;
+  margin: auto;
 }
-
-/* Form Styling */
-.form-container {
-  padding: 7px;
-  display: flex;
-  flex-direction: column;
-}
-
-.form-container input {
-  width: 200px;
-  box-sizing: border-box;
-  padding: 6px;
-  margin-bottom: 15px;
-  border-radius: 6.6px;
-}
-
-.form-container button {
-  width: 150px;
-}
-
-.submit-btn:hover {
-  background-color: aquamarine;
-}
-
-.container-right {
-  margin-right: 450px;
-}
-
-.form-data-render p {
-  line-height: 1.8;
-}
-
-
