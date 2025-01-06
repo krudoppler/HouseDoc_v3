@@ -1,7 +1,5 @@
-export const completedTasks = [
-  { id: 1, task: "Changed HVAC filter", date: "2025-01-01" },
-  { id: 2, task: "Repaired roof shingles", date: "2025-01-02" },
-  { id: 3, task: "Cleaned gutters", date: "2025-01-03" },
+export const utilities = [
+  { id: 1, name: "HVAC", lastServiceDate: "2024-12-15", serviceInterval: 365 },
+  { id: 2, name: "Water Heater", lastServiceDate: "2025-01-01", serviceInterval: 180 },
+  { id: 3, name: "Roof", lastServiceDate: "2023-07-20", serviceInterval: 365 },
 ];
-
-
