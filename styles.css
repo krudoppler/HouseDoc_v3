@@ -20,8 +20,8 @@ body {
 }
 
 button {
-  padding: 6px 12px;
-  border-radius: 7px;
+  padding: 4px 8px;
+  border-radius: 3.6px;
   font-family: "Josefin sans", sans-serif;
   background-color: rgba(90, 27, 95, 0.85);
   border: 0px solid black;
