@@ -110,18 +110,16 @@ h3 {
 }
 
 .list-container {
-  margin: auto;
-}
-
-/* Divider CSS */
-.divider-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0; /* Add space above and below the divider */
+  flex-direction: column;
 }
 
-.divider {
-  width: 90%; /* Adjust width to your needs */
-  border-top: 1px solid #ccc; /* Light gray line */
+.narrow-divider {
+  width: 80%; /* Adjust width as needed */
+  height: 2px; /* Set the thickness */
+  background-color: #ccc; /* Divider color */
+  margin: 20px auto; /* Center and add spacing */
+  border: none; /* Remove default border */
+  opacity: 0.7; /* Optional: Add transparency */
 }
+
